@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <table>
-        <% for (var i in quizzes){%>
-        <% var quiz= quizzes[i];%>
-        <li>
-            <%=quiz.question%>: <%=quiz.answer%>
-        </li>
-        <%}%>
-    </table>
+    <ul>
+    <%for (var i = 0; i < quizzes.length; i++ ){%>
+      <li>
+      <%= quizzes[i].question; %> : <%= quizzes[i].answer; %>
+      </li>
+    <%}%>
+    </ul>
     <a href="/credits"><button>Página credits</button></a>
-        <a href="/quizzes"><button>Página quizzes</button></a>
-  </body>
-</html>
+    <a href="/quizzes"><button>Página quizzes</button></a>
